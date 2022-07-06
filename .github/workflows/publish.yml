@@ -1,6 +1,6 @@
 name: Publish
 
-on: [workflow_dispatch]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
@@ -18,4 +18,4 @@ jobs:
       with:
         name: dist
         path: |
-          **/RoslynPad/bin/release/net5.0-windows/win-x64/publish/
+          **/RoslynPad/bin/release/net6.0-windows/win-x64/publish/*
